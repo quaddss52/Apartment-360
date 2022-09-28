@@ -9,9 +9,11 @@ import Offers from './pages/Offers';
 import Category from './pages/Category';
 import Profile from './pages/Profile';
 import CreateListings from './pages/CreateListings';
+import EditListing from './pages/EditListing';
 import Listing from './pages/Listing';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SingIn';
+import ContactLandlord from './pages/ContactLandlord';
 function App() {
   return (
     <>
@@ -27,7 +29,9 @@ function App() {
           <Route path = '/sign-up' element ={<SignUp />} />
           <Route path = '/forgot-password' element ={<ForgotPassword />} />
           <Route path = '/create-listing' element ={<CreateListings />} />
-          <Route path = '/category/:categoryName/:listinId' element ={<Listing />} />
+          <Route path = '/edit-listing/:listingId' element ={<EditListing />} />
+          <Route path = '/category/:categoryName/:listingId' element ={<Listing />} />
+          <Route path = '/contact/:landlordId' element ={<ContactLandlord />} />
         </Routes>
         <Navbar/>
       </Router>
